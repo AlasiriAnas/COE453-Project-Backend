@@ -1,0 +1,58 @@
+{
+  
+  "dependencies": {
+  
+    
+  "axios": "^1.4.0",
+  
+    
+  "express": "4.18.2",
+  
+    
+  "node": "^20.0.0"
+  
+  },
+  
+  "name": "coe453-project",
+  
+  "description": "Building a TO-DO Web App.",
+  
+  "version": "1.0.0",
+  
+  "main": "RestGateway.js",
+  
+  "scripts": {
+  
+    
+  "dev": "nodemon RestGateway.js",
+  
+    
+  "start": "nodemon RestServer.js"
+  
+  },
+  
+  "type": "module",
+  
+  "repository": {
+  
+    
+  "type": "git",
+  
+    
+  "url": "git+https://github.com/AlasiriAnas/COE453-Project.git"
+  
+  },
+  
+  "author": "",
+  
+  "license": "ISC",
+  
+  "bugs": {
+  
+    
+  "url": "https://github.com/AlasiriAnas/COE453-Project/issues"
+  
+  },
+  
+  "homepage": "https://github.com/AlasiriAnas/COE453-Project#readme"
+}
