@@ -17,7 +17,7 @@ const connectDB = async () => {
     try {
         await mongoose.connect(process.env.db_URI)
         console.log("Connected to database")
-        //listen to forwarded requests from Microservices APIs if Connection Succeded 
+        //listen to forwarded requests from Microservices APIs if Connection succeed 
         app.listen(Port,()=>{
         console.log(`Mircoservice3 API is running on port:http://localhost:${Port}`)
 });
