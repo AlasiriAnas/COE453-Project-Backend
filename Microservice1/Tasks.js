@@ -1,13 +1,15 @@
-import express from 'express'
-const app = express();
+import express from 'express';
+import connectDB from '../Microservice3/DB';
 
+
+const app = express();
 const Port = 8001;
 app.use(express.json());
 
 
 
 app.get('/Tasks', (req,res,next)=>{
-
+    // connect();
     console.log('Hello from Mircoservice1 API')
 
 });
