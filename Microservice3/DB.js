@@ -1,12 +1,12 @@
 import express from 'express'; 
 import mongoose from 'mongoose';
-import * as dotenv from 'dotenv' 
-dotenv.config();
+// import * as dotenv from 'dotenv' 
+// dotenv.config();
 
 
 
 const app = express();
-const Port = 8003;
+const Port = 5003;//will be mapped to 8003 
 app.use(express.json());
 
 
@@ -15,7 +15,7 @@ app.use(express.json());
 mongoose.set('strictQuery', false);
 const connectDB = async () => {
     try {
-        await mongoose.connect(process.env.db_URI)
+        await mongoose.connect("mongodb+srv://TODO:TODO4321@to-do-cluster.ejyegps.mongodb.net/?retryWrites=true&w=majority")
         console.log("Connected to database")
         //listen to forwarded requests from Microservices APIs if Connection succeed 
         app.listen(Port,()=>{

@@ -1,9 +1,13 @@
 FROM node
-WORKDIR .
-COPY packages*.json .
-RUN npm cache clean --force
-RUN em -rf node_modules
-COPY packages.json package-lock.json ./
+
+WORKDIR /app
+
+COPY package*.json ./
+
 RUN npm install
+
 COPY . .
-CMD node DB.js
+
+EXPOSE 5003
+
+CMD ["npm", "start"]

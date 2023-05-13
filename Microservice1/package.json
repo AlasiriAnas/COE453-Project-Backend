@@ -4,7 +4,7 @@
   "description": "",
   "main": "Tasks.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon Tasks.js"
   },
   "type": "module",
   "keywords": [],

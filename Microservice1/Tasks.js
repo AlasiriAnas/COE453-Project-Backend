@@ -1,9 +1,9 @@
 import express from 'express';
-import connectDB from '../Microservice3/DB';
+// import connectDB from '../Microservice3/DB';
 
 
 const app = express();
-const Port = 8001;
+const Port = 5001;//mapped to 8001
 app.use(express.json());
 
 
@@ -18,5 +18,5 @@ app.get('/Tasks', (req,res,next)=>{
 //listen to forwarded requests from API gateway 
 app.listen(Port,()=>{
     
-    console.log(`Mircoservice1 API is running on port:http://localhost:${Port}`)
+    console.log('Mircoservice1 API is running on port:http://localhost:8001')
 });

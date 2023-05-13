@@ -1,10 +1,10 @@
 import express from 'express';
-import connectDB from '../Microservice3/DB';
+
 
 
 
 const app = express();
-const Port = 8002;
+const Port = 5002;//mapped to 8002
 app.use(express.json());
 
 
@@ -17,5 +17,5 @@ app.get('/DisplayTasks', (req,res,next)=>{
 
 
 app.listen(Port, ()=>{
-    console.log(`Microservice2 API is running on: http://localhost:${Port}`)
+    console.log('Microservice2 API is running on: http://localhost:8002')
 });
