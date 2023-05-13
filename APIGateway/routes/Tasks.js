@@ -6,7 +6,7 @@ import axios from 'axios';
 
 
 //Routing(Forwarding) requests from API gateway to Microservices 
-router.all('/:Tasks', (req,res)=>{
+router.all('/', (req,res)=>{
     
   console.log(req.params.Tasks);
   //url should be replaced with Container Url

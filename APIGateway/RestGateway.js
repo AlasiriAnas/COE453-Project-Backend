@@ -1,5 +1,6 @@
 import express from 'express';
-import userRoutes from './routes/Tasks.js';
+import taskRoutes from './routes/Tasks.js';
+import displayTaskRoutes from './routes/DisplayTasks.js';
 
 //express app 
 const app = express();
@@ -8,15 +9,8 @@ const Port = 8000;
 //Data format (json)
 app.use(express.json());
 
-app.use('/', userRoutes);
-
-// app.get('/',(req,res) =>{
-
-//     console.log("Testing")
-
-//     res.send('Hello Form HomePage');
-// })
-
+app.use('/Tasks', taskRoutes);
+app.use('/DisplayTasks', displayTaskRoutes);
 
 
 //listen for requests 
