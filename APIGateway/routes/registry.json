@@ -1,0 +1,13 @@
+{
+
+    "services":{
+        "Tasks":{
+            "apiName": "Tasks",
+            "host":"http://localhost",
+            "port":"5001",
+            "url":"http://localhost:5001/"
+        }
+    }
+
+
+}

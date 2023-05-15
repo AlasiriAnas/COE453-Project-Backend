@@ -1,0 +1,21 @@
+GET http://localhost:8000/MC1/Tasks
+
+###
+GET http://localhost:8000/MC2/DisplayTasks
+
+###
+POST http://localhost:8000/MC1/Tasks
+Content-Type: application/json
+
+{
+    "text":"3rd place winner",
+    "complete":true
+}
+
+###
+PUT http://localhost:8000/MC1/Tasks/complete/6462394ce28a64a6371a7224
+
+
+###
+
+DELETE http://localhost:8000/MC1/Tasks/6462599a0c62d3b7abbdcc27
