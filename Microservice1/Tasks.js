@@ -25,18 +25,22 @@ app.use(cors());
 
 
 app.post('/Tasks', async (req,res)=>{
-fetch('http://localhost:5003/Tasks', {
-  method: 'POST',
-  body: JSON.stringify({
-    
-    "text":req.body.text,
-    "complete":req.body.complete
+  let resp = await fetch('http://localhost:5003/Tasks', {
+    method: 'POST',
+    body: JSON.stringify({
+      
+      "text":req.body.text,
+      "complete":req.body.complete
 
-  }),
-  headers: {
-    'Content-type': 'application/json; charset=UTF-8',
-  },
-}).then((response) => response.json()).then((json) => console.log(json))});
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  },);
+  let body = await resp.json();
+  console.log(body);
+  res.json(body);
+},);
 
 
 app.delete('/Tasks/:id', async (req,res)=>{
