@@ -32,21 +32,11 @@ app.delete('/Tasks/:id', async  (req,res)=>{
     console.log("Deleted")
 } )
 
-//update the text 
-app.put('/Tasks/:id', async(req,res)=>{
-    const result = await Todo.findByIdAndUpdate(req.params.id,{
-        text:req.body.text
-    },
-     {new:true});     
-    result.save();
-    res.json(result);
-})
 
 //update the checkbox complete
 app.put('/Tasks/complete/:id', async(req,res)=>{
     const result = await Todo.findById(req.params.id);     
     result.complete = !result.complete
-    result.save();
     res.json(result);
 })
  
